@@ -1,7 +1,7 @@
 const Banner = () => {
   return (
     <div>
-      <h1>This is home</h1>
+      <h2>This Is Banner</h2>
     </div>
   );
 };
