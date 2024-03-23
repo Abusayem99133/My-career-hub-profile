@@ -1,5 +1,6 @@
 import { CiLocationOn } from "react-icons/ci";
 import { CiDollar } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const FeaturesJob = ({ job }) => {
   const {
@@ -10,6 +11,7 @@ const FeaturesJob = ({ job }) => {
     location,
     job_type,
     salary,
+    id,
   } = job;
   return (
     <div className="card card-compact  bg-base-100 shadow-xl">
@@ -38,7 +40,9 @@ const FeaturesJob = ({ job }) => {
           <p> {salary}</p>
         </div>
         <div className="card-actions justify-start">
-          <button className="btn btn-primary">View Details</button>
+          <Link to={`/job/${id}`}>
+            <button className="btn btn-primary">View Details</button>
+          </Link>
         </div>
       </div>
     </div>
